@@ -29,7 +29,7 @@ def load_customers_from_file(filename="customers.json"):
         with open(filename, "r") as f:
             data = json.load(f)
             customers = {name: Customer.from_dict(info) for name, info in data.items()}
-            customers['ap_student']= Customer('ap_student','1234',1000)
+            customers.setdefault('ap_student', Customer('ap_student','1234',1000))
     except FileNotFoundError:
         customers = {'ap_student': Customer('ap_student','1234',1000)}
 
