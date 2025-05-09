@@ -358,6 +358,7 @@ class Window(QWidget):
         self.withdraw_btn2.setText(self.tr("Withdraw ","برداشت "))
         self.transfer_btn2.setText(self.tr("Transfer","انتقال"))
         self.change_btn2.setText(self.tr("Change Password","تعویض رمز عبور"))
+        
 if __name__ == "__main__":
     load_customers_from_file()
     app = QApplication(sys.argv)
